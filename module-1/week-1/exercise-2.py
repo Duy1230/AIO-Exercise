@@ -8,7 +8,7 @@ def is_number (n) :
     return True
 
 import math
-def exercise2():
+def cal_activation():
     activations = ['sigmoid', 'relu', 'elu']
     number = input("Input x= ")
     if not is_number(number):
