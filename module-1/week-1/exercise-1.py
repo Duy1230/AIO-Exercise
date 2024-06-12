@@ -20,4 +20,4 @@ def cal_precision_recall_f1(tp, fp, fn):
     print(f"F1 is: {(2*precision*recall)/(precision+recall)}")
 
 if __name__ == "__main__":
-    cal_precision_recall_f1(2, 3, 0)
+    cal_precision_recall_f1(2, 4, 5)
