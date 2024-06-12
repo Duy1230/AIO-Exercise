@@ -1,4 +1,5 @@
-def exercise1(tp, fp, fn):
+
+def cal_precision_recall_f1(tp, fp, fn):
     if not type(tp) == int:
         print("tp must be an integer")
         return
@@ -20,4 +21,5 @@ def exercise1(tp, fp, fn):
     print(f"F1 is: {(2*precision*recall)/(precision+recall)}")
 
 if __name__ == "__main__":
-    exercise1(2, 3, 0)
+    cal_precision_recall_f1(2, 4, 5)
+

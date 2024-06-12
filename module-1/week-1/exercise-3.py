@@ -14,7 +14,9 @@ def cal_loss(loss, y_pred, y_true):
         return mse(y_pred, y_true)
 
 
-def exercise_3():
+
+def cal_loss_multiple():
+
     num_sample = input("Input number of samples: ")
     if not num_sample.isnumeric():
         print("Number of samples must be a positive integer")
@@ -39,4 +41,4 @@ def exercise_3():
 
     print(f"Final {loss.upper()} loss: {total/num_sample}")
 if __name__ == "__main__":
-    exercise_3()
+    cal_loss_multiple()
