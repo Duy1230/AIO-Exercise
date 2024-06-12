@@ -8,6 +8,7 @@ def is_number (n) :
     return True
 
 import math
+
 def cal_activation():
     activations = ['sigmoid', 'relu', 'elu']
     number = input("Input x= ")
@@ -31,3 +32,4 @@ def cal_activation():
 
 if __name__ == "__main__":
     cal_activation()
+

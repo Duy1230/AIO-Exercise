@@ -1,3 +1,4 @@
+
 def cal_precision_recall_f1(tp, fp, fn):
     if not type(tp) == int:
         print("tp must be an integer")
@@ -21,3 +22,4 @@ def cal_precision_recall_f1(tp, fp, fn):
 
 if __name__ == "__main__":
     cal_precision_recall_f1(2, 4, 5)
+
