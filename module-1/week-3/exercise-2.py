@@ -19,7 +19,7 @@ class student(person):
 
     def describe(self):
         print(
-            f"Student - Name : {self.name} - YoB : {self.yob} - Grade : {self.grade}")
+            f"Student - Name : {self._name} - YoB : {self._yob} - Grade : {self._grade}")
 
 
 class teacher(person):
@@ -29,7 +29,7 @@ class teacher(person):
 
     def describe(self):
         print(
-            f"Teacher - Name : {self.name} - YoB : {self.yob} - Subject : {self.subject}")
+            f"Teacher - Name : {self._name} - YoB : {self._yob} - Subject : {self._subject}")
 
 
 class doctor(person):
@@ -39,7 +39,7 @@ class doctor(person):
 
     def describe(self):
         print(
-            f"Doctor - Name : {self.name} - YoB : {self.yob} - Specialist : {self.specialist}")
+            f"Doctor - Name : {self._name} - YoB : {self._yob} - Specialist : {self._specialist}")
 
 
 class ward:
@@ -52,31 +52,31 @@ class ward:
         self._people = []
 
     def describe(self):
-        print(f"Ward Name : {self.name}")
-        for person in self.people:
+        print(f"Ward Name : {self._name}")
+        for person in self._people:
             person.describe()
 
     def add_person(self, person):
-        if (len(self.people) < self.capacity):
-            self.people.append(person)
+        if (len(self._people) < self._capacity):
+            self._people.append(person)
         else:
             print("Ward is full")
 
     def count_doctor(self):
         count = 0
-        for person in self.people:
+        for person in self._people:
             if isinstance(person, doctor):
                 count += 1
         return count
 
     def sort_age(self):
-        self.people.sort(key=lambda x: x.yob, reverse=True)
+        self._people.sort(key=lambda x: x._yob, reverse=True)
 
     def compute_average(self):
         total, count = 0, 0
-        for person in self.people:
+        for person in self._people:
             if isinstance(person, teacher):
-                total += person.yob
+                total += person._yob
                 count += 1
         return total / count
 
